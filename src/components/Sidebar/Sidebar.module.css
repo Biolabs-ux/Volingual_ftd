@@ -1,0 +1,176 @@
+.main1 {
+    display: flex;
+}
+
+.mainLeft {
+    position: relative; /* Added to keep the hamburger icon visible */
+    width: 110px;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: #190217;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: width 0.5s;
+}
+
+.mainLeft h5 {
+    display: none;
+}
+
+.mainLeft h5:hover {
+    color: white;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.user h2 {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 10px;
+    display: none; /* Hide by default */
+}
+
+.user .menu {
+    cursor: pointer;
+    position: absolute;
+    top: -1em;
+    left: 20px;
+    /* color: red; */
+    /* z-index: 2;  */
+}
+
+.userImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.mainLeft ul {
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+.mainLeft ul li {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    cursor: pointer;
+    padding: 3px 5px;
+}
+
+.mainLeft ul li p {
+    white-space: nowrap;
+    display: none;
+    color: grey;
+    font-size: 10px;
+}
+
+.mainLeft.expanded {
+    width: 250px;
+}
+
+.mainLeft.expanded .user div {
+    display: block;
+}
+
+.mainLeft.expanded .user h2 {
+    display: block; /* Show when expanded */
+}
+
+.mainLeft.expanded .user .menu {
+    position: static; /* Reset to original position in expanded view */
+}
+
+.mainLeft.expanded .user {
+    width: 100%;
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.mainLeft.expanded .userImg {
+    margin: 0;
+}
+
+.mainLeft.expanded ul li p {
+    display: block;
+}
+
+.mainLeft.expanded ul li {
+    justify-content: flex-start;
+}
+
+.mainLeft ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.mainRight {
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.nav h2 {
+    font-family: "agrandirgrand_heavy", arial, sans-serif;
+}
+
+.navLinks {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    cursor: pointer;
+}
+
+.navLink:hover {
+    color: grey;
+}
+
+.bigText h1 {
+    font-size: 80px;
+    font-weight: 300;
+    padding-left: 15%;
+    padding-top: 1em;
+    font-family: "agrandirgrand_heavy", arial, sans-serif;
+}
+
+.separate {
+    padding-left: 30%;
+    display: flex;
+    align-content: center;
+    gap: 2em;
+}
+
+.btn {
+    padding-top: 3px;
+}
+
+.btn1 {
+    font-size: 20px;
+    border: 1px dotted;
+    padding: 1em;
+    border-radius: 40px;
+}
