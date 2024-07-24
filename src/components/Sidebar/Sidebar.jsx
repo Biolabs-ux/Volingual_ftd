@@ -26,10 +26,12 @@ const Sidebar = () => {
                         <p>Dashboard</p>
                     </li>
                     <h5>CREATIONS</h5>
+                    <Link href={"/texttranslation"}>
                     <li>
                         <i className="fa-solid fa-file-lines" style={{ color: "#ffffff" }}></i>
-                        <p>Text Transition</p>
+                        <p>Text Translation</p>
                     </li>
+                    </Link>
                     <li>
                         <i className="fa-solid fa-volume-high" style={{ color: "#ffffff" }}></i>
                         <p>Text to Speech</p>

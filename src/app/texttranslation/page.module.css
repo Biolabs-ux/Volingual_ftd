@@ -1,0 +1,307 @@
+/* Desktop styles (1025px and wider) */
+@media screen and (min-width: 1025px) {
+.container {
+    display: flex;
+    height: 100vh; 
+    overflow-y: hidden;
+
+  }
+  
+  .sidebar {
+    width: 250px; 
+    /* background-color: red;  */
+  }
+  
+  .main {
+    flex-grow: 1;
+    font-family: "Arial", sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    padding: 20px;
+    height: 90svh;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .exchange{
+    display: none;
+  }
+  
+  .icons{
+    display: none;
+  }
+  .topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+  }
+  
+  .left {
+    padding-left: 10px;
+  }
+  
+  .left input {
+    padding: 5px 15px;
+  }
+  
+  .right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 3em;
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C4CDD5;
+    padding: 2em 1em 1em 1em;
+  }
+  .nav ul {
+    list-style-type: none;
+  }
+  
+  .btn2 {
+    background-color: #190217;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+   
+  .mainright1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .mainright1 img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 3em;
+  }
+  
+  .container1 {
+  background-color: #f7f8fa;
+  padding: 20px;
+}
+  
+  .header1 {
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .languageSelector {
+    display: flex;
+    gap: 25em; /* Adjust this value as needed */
+  }
+  
+  .dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #fff;
+  }
+  
+  .maincontent {
+    display: flex;
+    background-color: #fff;
+    /* background-color: red; */
+    border: 1px solid #ccc;
+  }
+  
+  .content {
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    /* padding: 20px; */
+    width: 50%;
+    border-radius: 8px;
+    /* outline: 1px solid #190217; */
+  }
+  
+  .textArea {
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    /* border: 1px solid red; */
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  .outputContainer {
+    position: relative;
+    width: 50%;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .copyButton {
+    position: absolute;
+    bottom: 10px;
+    right: 2em;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #190217;
+    background-color: transparent;
+    border: 1px solid #190217;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .translateButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #190217;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .translateButton:hover, .copyButton:hover {
+    background-color: #1902172e;
+    border: 1px solid #1902172e;
+  }
+}
+/* ==========================  Phone styles (up to 600px) =========================== */
+@media (max-width: 600px) {
+  /* .full {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  } */
+
+  .content {
+    flex: 1;
+  }
+
+  .main {
+    font-family: 'Syne', sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    /* background-color: red; */
+    padding: 10px;
+    height: 110vh;
+    overflow-y: auto;
+  }
+  
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    /* background-color: red; */
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .left {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburgerMenu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #333;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    /* background-color: #fff;  */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .languageSelector{
+    display: flex;
+    gap: 5em;
+    padding: 2em 0 2em 1em ;
+    /* justify-content: space-between; */
+  }
+  .maincontent{
+    width: 100%;
+  }
+  .content, .outputContainer, .textArea{
+    background-color: white;
+  }
+  .textArea{ 
+    width: 100%;
+     height: 150px;
+     padding: 1em;
+   }
+  .translateButton1{
+    margin: 1em 0;
+    background-color: #190217;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 11px;
+  }
+  .outputContainer{
+    position: relative;
+  }
+  .icons{
+    position: absolute;
+    font-size: 18px;
+    display: flex;
+    right: 2em;
+    bottom: 4em;
+    gap: 2em;
+  }
+  .copyButton{
+    display: none;
+  }
+
+  .translateButton{
+    display: none;
+  }
+}

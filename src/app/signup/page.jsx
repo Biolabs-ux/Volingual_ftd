@@ -2,15 +2,51 @@
 import React, { useState } from "react";
 import style from "./page.module.css";
 import Link from "next/link";
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
-function Page() {
+const Page = () => {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
+    first_name:"",
+    last_name:"",
+    country:"",
+    email:"",
+    password:""
+  })
+
+  const [error, setError] = useState("")
+
+  const handleOnchange = (e)=>{
+    setFormData({...formData, [e.target.name]:e.target.value})
+  }
+
+  const handleSubmit = async (e)=>{
+    e.preventDefault()
+    if (!first_name || !last_name || !country || !email || !password ) {
+      // Show an error message
+      setError("All fields are required")
+    }
+    else{
+      console.log(formData)
+      // make call to api
+   const res = await axios.post("http://loacalhost:8080/api/v1/auth/register/", formData)
+      // check our response
+      if (res.status === 201) {
+        // redirect to verify email component
+        navigate()
+      }
+      // server error pass to error
+  }
+  }
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
-  return (
+ const {first_name, last_name, country, email, password}=formData
+  
+ return (
     <section className={style.form}>
       <div className={style.left}>
         <div className={style.content}>
@@ -23,28 +59,44 @@ function Page() {
         <div className={style.con}>
           <h2>Hello!</h2>
           <p>Sign up and get started</p>
-          <form action="">
+          <p style={{color: "red", padding:"1px"}}>{error ? error : ""}</p>
+          <form onSubmit={handleSubmit}>
             <div className={style.inputContainer}>
               <i className="fa fa-user" aria-hidden="true"></i>
-              <input type="text" placeholder="First Name" />
+              <input type="text" name="first_name" placeholder="First Name"
+              value={first_name}
+              onChange={handleOnchange}
+              />
             </div>
             <div className={style.inputContainer}>
               <i className="fa fa-user" aria-hidden="true"></i>
-              <input type="text" placeholder="Last Name" />
+              <input type="text" name="last_name" placeholder="Last Name"
+              value={last_name}
+              onChange={handleOnchange}
+              />
             </div>
             <div className={style.inputContainer}>
               <i className="fa fa-flag" aria-hidden="true"></i>
-              <input type="text" placeholder="Country" />
+              <input type="text" name="country" placeholder="Country" 
+              value={country}
+              onChange={handleOnchange}
+              />
             </div>
             <div className={style.inputContainer}>
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" name="email" placeholder="Email"
+              value={email}
+              onChange={handleOnchange}
+              />
             </div>
             <div className={style.inputContainer}>
               <i className="fa fa-lock" aria-hidden="true"></i>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
+                name="password"
+                value={password}
+                onChange={handleOnchange}
               />
               <i
                 className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
