@@ -14,7 +14,7 @@ function page() {
         <div className={style.circle1}></div>
       </div>
       <div className={style.right}>
-        <Image width={1000} height={1000} src="/images/Pin Code.png" alt="" />
+        <Image width={100} height={100} src="/images/Pin Code.png" alt="" />
         <div className={style.con}>
           <h2>Set a new password</h2>
           <p>Must be atleast 8 characters</p>
@@ -30,7 +30,7 @@ function page() {
             <button>Reset password</button>
           </form>
             <div className={style.exist}>
-            <p>Go back to <Link href={"/signin"}>Sign in</Link></p>
+            <p>Go back to <Link href={"/login"}>Sign in</Link></p>
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+/* Desktop styles (1025px and wider) */
+@media screen and (min-width: 1025px) {
 .form {
     display: flex;
     color: #190217;
@@ -120,3 +122,77 @@
     text-decoration: none;
     font-size: 14px;
   } 
+}
+/* ==========================  Phone styles (up to 600px) =========================== */
+@media (max-width: 600px) {
+  .left{
+    display: none;
+  }
+  .right {
+    /* width: 50%; */
+    padding: 2em;
+    display: grid;
+    place-content: center;
+    transform: translateY(4em);
+  }
+  .right img{
+    transform: translateX(4em);
+  }
+  .right h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 1em;
+  }
+  .right p{
+    font-size: 12px;
+    padding-left: 3em;
+}
+
+  .right form div {
+    position: relative;
+  }
+  .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    justify-content: center;
+    padding: 1em 0;
+  }
+  
+  .right form i {
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    top: 50%;
+    color: #33333372;
+    transform: translate(-50%, -50%);
+  }
+  .right input {
+    width: Fixed (330px) px;
+    height: Hug (60px) px;
+    padding: 9px 55px 9px 55px;
+    gap: 10px;
+    outline: none;
+    border-radius: 30px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #111111;
+  }
+  .right form button {
+    height: Hug (57px) px;
+    padding: 9px 55px 9px 55px;
+    gap: 10px;
+    border-radius: 30px;
+    opacity: 0px;
+    background: #190217;
+    color: white;
+    border: none;
+  }
+  
+   .exist a{
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+  } 
+}

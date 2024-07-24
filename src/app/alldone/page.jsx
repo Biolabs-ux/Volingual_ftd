@@ -14,7 +14,7 @@ function page() {
         <div className={style.circle1}></div>
       </div>
       <div className={style.right}>
-        <Image width={1000} height={1000} src="/images/Verified Account.png" alt="" />
+        <Image width={100} height={100} src="/images/Verified Account.png" alt="" />
         <div className={style.con}>
           <h2>Password reset</h2>
           <p>Your password has been reset. You are been redirected to the <span>login screen</span></p>         

@@ -1,3 +1,5 @@
+/* Desktop styles (1025px and wider) */
+@media screen and (min-width: 1025px) {
 .form {
     display: flex;
     color: #190217;
@@ -92,3 +94,48 @@
       color: white;
     text-decoration: none;
   }
+}
+/* ==========================  Phone styles (up to 600px) =========================== */
+@media (max-width: 600px) {
+  .left{
+    display: none;
+  }
+  .right{
+    transform: translateY(9em);
+
+  }
+  .right img{
+    transform: translateX(9em);
+  }
+  .right h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 6em;
+  }
+  .right p{
+    font-size: 10px;
+    transform: translateY(2em);
+    transform: translateX(2.5em);
+  }
+
+.right p span{
+  color: #190217;
+  font-size: 12px;
+}
+.right button {
+  height: Hug (57px) px;
+  padding: 9px 55px 9px 55px;
+  gap: 10px;
+  border-radius: 30px;
+  opacity: 0px;
+  background: #190217;
+  border: none;
+  margin-top: 1em;
+  transform: translateX(4em);
+  /* transform: translateY(1em); */
+}
+.right button a{
+      color: white;
+    text-decoration: none;
+  }
+}

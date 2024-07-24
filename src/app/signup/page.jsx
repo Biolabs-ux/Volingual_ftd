@@ -4,10 +4,10 @@ import style from "./page.module.css";
 import Link from "next/link";
 import axios from "axios";
 // import {useNavigate} from "react-router-dom";
-import { useNavigate} from "react-dom"
+// import { useNavigate} from "react-dom"
 
 const Page = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     first_name:"",

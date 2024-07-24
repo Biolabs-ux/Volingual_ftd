@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './page.module.css';
+import Link from 'next/link';
 
 function page() {
   return (
@@ -8,12 +9,8 @@ function page() {
         <div className={styles.navbar}>
           <nav>
             <ul className={styles.navList}>
-              <li className={styles.navItem}><a href="#home" className={styles.navLink}>Home</a></li>
-              <li className={styles.navItem}><a href="#about" className={styles.navLink}>About</a></li>
-              <li className={styles.navItem}><a href="#services" className={styles.navLink}>Services</a></li>
-              <li className={styles.navItem}><a href="#why-us" className={styles.navLink}>Why Us</a></li>
-              <li className={styles.navItem}><a href="#testimonials" className={styles.navLink}>Testimonials</a></li>
-              <li className={styles.navItem}><a href="#contact" className={styles.navLink}>Contact</a></li>
+              <li className={styles.navItem}><Link href={"signup"} className={styles.navLink}>Sign UP</Link></li>
+              <li className={styles.navItem}><Link href={"login"} className={styles.navLink}>Login</Link></li>
             </ul>
           </nav>
         </div>

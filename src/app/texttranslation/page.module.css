@@ -173,6 +173,9 @@
     cursor: pointer;
     margin-top: 20px;
   }
+  .translateButton1{
+    display: none;
+  }
   
   .translateButton:hover, .copyButton:hover {
     background-color: #1902172e;

@@ -33,7 +33,7 @@ function page() {
           </form>
             <div className={style.exist}>
           <p className={style.click}>Didn&#39;t receive the email? <Link href={""}>CLick to resend</Link></p>
-            <p>Go back to <Link href={"/signin"}>Sign in</Link></p>
+            <p>Go back to <Link href={"/login"}>Sign in</Link></p>
             </div>
           </div>
         </div>

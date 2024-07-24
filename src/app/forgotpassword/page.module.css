@@ -1,3 +1,5 @@
+/* Desktop styles (1025px and wider) */
+/* @media screen and (min-width: 1025px) { */
 .form {
   display: flex;
   color: #190217;
@@ -94,9 +96,11 @@
   transform: translate(-50%, -50%);
 }
 .right input {
-  width: Fixed (330px) px;
+  /* width: Fixed (57px) px; */
+  width: 350px;
   height: Hug (60px) px;
-  padding: 9px 55px 9px 55px;
+  padding: 9px 60px 9px 60px;
+  /* background-color: red; */
   gap: 10px;
   outline: none;
   border-radius: 30px;
@@ -120,13 +124,13 @@
   text-decoration: none;
   font-size: 14px;
 } 
-
+/* } */
 
 /* ==========================  Phone styles (up to 600px) =========================== */
 @media (max-width: 600px) {
 .left{
   display: none;
-}
+
 }
 .right {
 padding: 2em;
@@ -135,13 +139,17 @@ place-content: center;
 transform: translate(4em);
 /* padding: 2em; */
 }
+.right input {
+  width: 250px;
+}
 .right h2 {
 transform: translateX(-1em);
 /* background-color: red; */
 font-weight: 550;
-font-size: 26px;
+font-size: 23px;
 }
 .right p,
 .right a {
 font-size: 16px;
+}
 }
