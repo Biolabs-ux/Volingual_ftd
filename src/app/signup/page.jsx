@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import style from "./page.module.css";
 import Link from "next/link";
 import axios from "axios";
-import {useNavigate} from "react-router-dom"
+// import {useNavigate} from "react-router-dom";
+import { useNavigate} from "react-dom"
 
 const Page = () => {
   const navigate = useNavigate()
