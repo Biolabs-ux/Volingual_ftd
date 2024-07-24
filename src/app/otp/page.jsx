@@ -14,7 +14,7 @@ function page() {
         <div className={style.circle1}></div>
       </div>
       <div className={style.right}>
-        <Image width={1000} height={1000}
+        <Image width={100} height={100}
         src="/images/Open Envelope.png" alt=""
         />
         <div className={style.con}>
