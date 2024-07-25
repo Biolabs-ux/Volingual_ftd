@@ -44,7 +44,7 @@ function Page() {
             </div>
             <div className={styles.featureText}>
               <h2>Online AI text-to-speech</h2>
-              <p>Use Volingual's text-to-speech tool in your browser. Paste text, and AI voices or avatars will read it. Realistic sound, no robots. Make engaging content easily!</p>
+              <p>Use Volingual&#39;s text-to-speech tool in your browser. Paste text, and AI voices or avatars will read it. Realistic sound, no robots. Make engaging content easily!</p>
             </div>
           </div>
           <div className={styles.featureItem}>
@@ -53,7 +53,7 @@ function Page() {
             </div>
             <div className={styles.featureText}>
               <h2>Diverse Voices for Your Text</h2>
-              <p>Enhance your brand campaigns with Voi's diverse AI voices and avatars. Customize voice and style to stand out with powerful speech synthesis!</p>
+              <p>Enhance your brand campaigns with Volingual&#39;s diverse AI voices and avatars. Customize voice and style to stand out with powerful speech synthesis!</p>
             </div>
           </div>
         </section>
