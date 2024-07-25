@@ -60,7 +60,7 @@ const Page = () => {
                   <button>Change</button>
                 </div>
                 <div className={styles.basicInformation}>
-                  <h2>Basic information</h2>
+                  <h1>Basic information</h1>
                   <p>Update some personal information. Your address will never be publicly available.</p>
                   <div className={styles.basic}>
                     <div className={styles.mainleft3}>
