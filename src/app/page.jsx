@@ -32,7 +32,7 @@ function Page() {
           <h1>
             GENERATE LIFELIKE VOICES <br />
             AND NARRATE STORIES, <br />
-            AND INSTANTLY WITH VOLINGUAL'S <br />
+            AND INSTANTLY WITH VOLINGUAL&#39;S <br />
             AI TEXT-TO-SPEECH TOOL.
           </h1>
         </header>
