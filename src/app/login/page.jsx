@@ -2,12 +2,43 @@
 import React, { useState } from "react";
 import style from "./page.module.css";
 import Link from "next/link";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import { useRouter } from "next/navigation";
 
-function Page() {
+export default function Page() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const [accessToken, setAccessToken] = useState("");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email || !password) {
+      setError("Please fill in all fields");
+      return;
+    }
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/v1/login/', { email, password });
+      if (response.status === 200) {
+        const token = response.data.access_token;
+        setAccessToken(token);
+        localStorage.setItem('access_token', token);
+        console.log(token);
+        toast.success("Login successful");
+        // Add your logic to handle successful login, e.g., redirect to another page
+        router.push("/texttranslation"); // Redirect to a dashboard or another page
+      }
+    } catch (error) {
+      toast.error("Invalid email or password");
+      setError("Invalid email or password");
+    }
   };
 
   return (
@@ -23,16 +54,25 @@ function Page() {
         <div className={style.con}>
           <h2>Hello Again!</h2>
           <p>Welcome Back</p>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <div className={style.inputContainer}>
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
-              <input type="email" placeholder="Email" />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </div>
             <div className={style.inputContainer}>
               <i className="fa fa-lock" aria-hidden="true"></i>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
               <i
                 className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
@@ -48,10 +88,11 @@ function Page() {
                 }}
               ></i>
             </div>
-            <button>Login</button>
+            {error && <p className={style.error}>{error}</p>}
+            <button type="submit">Login</button>
           </form>
           <div className={style.forgot}>
-            <Link href={"/forgotpassword"}>Forgot Password ?</Link>
+            <Link href={"/forgotpassword"}>Forgot Password?</Link>
           </div>
           <div className={style.bot}>
             <p>Or login with</p>
@@ -89,8 +130,7 @@ function Page() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }
-
-export default Page;
